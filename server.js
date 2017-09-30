@@ -1,5 +1,3 @@
-process.env.ROOT_PATH = __dirname;
-
 const express = require('express'),
       app = express(),
       fs = require('fs'),
@@ -11,6 +9,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 var port = process.env.PORT || 4000;
+
 app.listen(port, () => {
   console.log("Listening on " + port);
 });
@@ -22,4 +21,9 @@ app.get("/", (req, res) => {
 app.get("/v/:folder/:file", (req, res) => {
   const r = req.params;
   res.sendFile(`${__dirname}/view/${r.folder}/${r.file}`);
-})
+});
+
+app.get("/c/:file", (req, res) => {
+  const r = req.params;
+  res.sendFile(`${__dirname}/controllers/${r.file}`);
+});
