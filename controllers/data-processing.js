@@ -1,6 +1,5 @@
 function getTrainData(callback) {
   const pixels = ctx.getImageData(0, 0, imageSize, imageSize);
-  console.log(pixels.data);
   let trainData = [];
   for (let i = 0; i < pixels.data.length; i += 4) {
     let r, g, b, a;
@@ -19,7 +18,6 @@ function getTrainData(callback) {
     });
 
     if (i == pixels.data.length - 4) {
-      console.log(trainData);
       callback(trainData);
     }
   }
