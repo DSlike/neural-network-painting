@@ -1,1 +1,1 @@
-html,body{margin:0px;padding:0px;background-color:#eee}
+html,body{display:flex;margin:0px;padding:0px;width:100%;height:100%;background-color:#eee;flex-wrap:wrap}html span,body span{position:absolute;top:1em;left:50%;transform:translate(-50%, 0)}html #wrapper,body #wrapper{display:flex;margin:auto;transform:scale(1.5);flex-wrap:wrap;justify-content:center}html #wrapper canvas,body #wrapper canvas{margin:0 1em}
