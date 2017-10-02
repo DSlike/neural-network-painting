@@ -15,7 +15,7 @@ function start(){
             paint(() => {
               setTimeout(function() {
                 iteration += 2;
-                $("span").text("Iteration: " + iteration);
+                document.getElementsByTagName('span')[0].innerHTML = ("Iteration: " + iteration);
                 train();
               }, 50);
             });
