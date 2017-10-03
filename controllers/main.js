@@ -5,7 +5,7 @@ const copypx = Copy.getContext('2d');
 const ctx = Original.getContext('2d');
 
 var img = new Image;
-img.src = '/v/images/twitter.png';
+img.src = 'view/images/twitter.png';
 img.onload = function() {
   ctx.drawImage(img, 0, 0, imageSize, imageSize);
   start();
