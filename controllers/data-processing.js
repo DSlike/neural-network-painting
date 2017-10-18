@@ -25,8 +25,10 @@ function getTrainData(callback) {
 
 function getInputArray(x, y, i) {
   let w = Math.sin((i / (Math.pow(imageSize, 2))).toFixed(10));
-  let im = (w + x / imageSize + y / imageSize / 100).toFixed(6);
-  return [x / imageSize, y / imageSize, w, im];
+  let im = (w + x / imageSize + y / imageSize / 100).toFixed(6),
+      tx = Math.abs(x/tableCells)/tableCells,
+      ty = Math.abs(y/tableCells)/tableCells;
+  return [x / imageSize, y / imageSize, tx, ty, w, im];
 }
 
 function makeItUniq(r, g, b, a, i) {
