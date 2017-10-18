@@ -7,11 +7,13 @@ function start(){
         rate: 0.1,
         iterations: 1,
         error: 0.00005,
+        shuffle: true
       });
+
       paint();
-        iteration ++;
-        document.getElementsByTagName('span')[0].innerHTML = ("Iteration: " + iteration);
-        requestAnimationFrame(train);
+      iteration ++;
+      document.getElementsByTagName('span')[0].innerHTML = ("Iteration: " + iteration);
+      requestAnimationFrame(train);
     }
     train(trainingData);
   });

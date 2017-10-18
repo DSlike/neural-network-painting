@@ -9,11 +9,9 @@ function paint() {
     var result = netWork.activate(getInputArray(x, y, i));
 
     result = parseUniq(result, i);
-    let c = (parseInt(result[0]) + parseInt(result[1]) + parseInt(result[2]))/3;
-    for(let j=0; j<3; j++){
-      pixels.data[i+j] = c;
+    for(let j=0; j<4; j++){
+      pixels.data[i+j] = parseInt(result[j]);
     }
-    pixels.data[i + 3] = parseInt(result[3]);
 
     if (i == pixels.data.length - 4) {
       copypx.putImageData(pixels, 0, 0);
