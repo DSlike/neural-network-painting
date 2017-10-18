@@ -10,7 +10,7 @@ const input = 6,
       gates = 15,
       tableCells = 10;
 
-var iteration = 2;
+var iteration = 1;
 
 var trainingData = [];
 

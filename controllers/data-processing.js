@@ -28,6 +28,7 @@ function getInputArray(x, y, i) {
   let im = (w + x / imageSize + y / imageSize / 100).toFixed(6),
       tx = Math.abs(x/tableCells)/tableCells,
       ty = Math.abs(y/tableCells)/tableCells;
+
   return [x / imageSize, y / imageSize, tx, ty, w, im];
 }
 

@@ -4,24 +4,14 @@ function start(){
       trainingData = _.shuffle(trainingData);
 
       trainer.train(trainingData, {
-        rate: .1,
-        iterations: 2,
-        error: .00005,
-        shuffle: true,
-        log: 1,
-        schedule: {
-          every: 2,
-          do: function(data) {
-            paint(() => {
-              setTimeout(function() {
-                iteration += 2;
-                document.getElementsByTagName('span')[0].innerHTML = ("Iteration: " + iteration);
-                train();
-              }, 50);
-            });
-          }
-        }
+        rate: 0.1,
+        iterations: 1,
+        error: 0.00005,
       });
+      paint();
+        iteration ++;
+        document.getElementsByTagName('span')[0].innerHTML = ("Iteration: " + iteration);
+        requestAnimationFrame(train);
     }
     train(trainingData);
   });
