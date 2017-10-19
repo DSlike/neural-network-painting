@@ -39,5 +39,5 @@ function requestAnimFrame() {
   }
   delta = (Date.now() - lastCalledTime)/1000;
   lastCalledTime = Date.now();
-  fps = Math.round(1/delta);
+  fps = (1/delta).toFixed(1);
 }
