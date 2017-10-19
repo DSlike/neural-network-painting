@@ -8,9 +8,10 @@ const input = 6,
       output = 4,
       connections = 25,
       gates = 15,
-      tableCells = 10;
+      tableCells = 10,
+      iterationStep = 1;
 
-var iteration = 1;
+var iteration = 0;
 
 var trainingData = [];
 
