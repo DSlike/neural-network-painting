@@ -15,14 +15,15 @@ function go(trainingData){
   paint();
 
   iteration += iterationStep;
-  document.getElementsByTagName('span')[0].innerHTML = ("Iteration: " + iteration + "<br>FPS:"+fps);
+  let fpsLabel = "";
+  // fpsLabel = "<br>FPS:"+fps;
+  document.getElementsByTagName('span')[0].innerHTML = ("Iteration: " + iteration + fpsLabel);
 
   requestAnimationFrame(go);
 }
 
 function train() {
   tData = _.shuffle(tData);
-
   trainer.train(tData, {
     rate: 0.1,
     iterations: iterationStep,

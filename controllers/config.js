@@ -8,10 +8,10 @@ const input = 8,
       output = 4,
       connections = 20,
       gates = 15,
-      tableCells = 100,
-      iterationStep = 1;
+      tableCells = 10,
+      iterationStep = 2;
 
-const imageSize = 100,
+const imageSize = 80,
       maxColor = 255;
 
 var iteration = 0;

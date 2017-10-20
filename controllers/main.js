@@ -12,6 +12,7 @@ Original.height = imageSize;
 var img = new Image;
 
 img.src = 'view/images/gitlab.png';
+
 img.onload = function() {
   ctx.drawImage(img, 0, 0, imageSize, imageSize);
   start();

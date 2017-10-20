@@ -1,6 +1,8 @@
 function getTrainData(callback) {
+
   const pixels = ctx.getImageData(0, 0, imageSize, imageSize);
   let trainData = [];
+
   for (let i = 0; i < pixels.data.length; i += 4) {
     let r, g, b, a;
 
@@ -24,15 +26,16 @@ function getTrainData(callback) {
 }
 
 function getInputArray(x, y, i) {
+
   let w = Math.sin((i / (Math.pow(imageSize, 2))).toFixed(10));
+
   let im = (w + x / imageSize + y / imageSize / 100).toFixed(6),
       tx = Math.abs(x/tableCells)/tableCells,
       ty = Math.abs(y/tableCells)/tableCells,
       cx = x - Math.abs(x/10),
       cy = y - Math.abs(y/10);
-      // console.log(cx);
 
-  return [x/imageSize,y/imageSize,cx / imageSize, cy / imageSize, tx, ty, w, im];
+  return [x/imageSize, y/imageSize, w, im, cx / imageSize, cy / imageSize, tx, ty];
 }
 
 function makeItUniq(r, g, b, a, i) {
