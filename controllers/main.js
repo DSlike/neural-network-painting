@@ -11,7 +11,7 @@ Original.height = imageSize;
 
 var img = new Image;
 
-img.src = 'view/images/gitlab.png';
+img.src = 'view/images/twitter.png';
 
 img.onload = function() {
   ctx.drawImage(img, 0, 0, imageSize, imageSize);

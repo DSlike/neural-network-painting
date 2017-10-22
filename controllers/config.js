@@ -4,12 +4,12 @@ const Trainer = synaptic.Trainer;
 
 // Neural network configuration
 const input = 8,
-      pool = 20,
+      pool = 40,
       output = 4,
       connections = 20,
       gates = 15,
       tableCells = 10,
-      iterationStep = 2;
+      iterationStep = 1;
 
 const imageSize = 80,
       maxColor = 255;

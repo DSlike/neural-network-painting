@@ -25,7 +25,7 @@ function go(trainingData){
 function train() {
   tData = _.shuffle(tData);
   trainer.train(tData, {
-    rate: 0.1,
+    rate: 0.05,
     iterations: iterationStep,
     error: 0.005,
     shuffle: true
