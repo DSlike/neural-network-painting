@@ -16,7 +16,8 @@ function go(trainingData){
 
   iteration += iterationStep;
   let fpsLabel = "";
-  // fpsLabel = "<br>FPS:"+fps;
+  if(showFps == true)
+    fpsLabel = "<br>FPS:"+fps;
   document.getElementsByTagName('span')[0].innerHTML = ("Iteration: " + iteration + fpsLabel);
 
   requestAnimationFrame(go);
@@ -27,7 +28,8 @@ function train() {
   trainer.train(tData, {
     rate: 0.05,
     iterations: iterationStep,
-    error: 0.005,
+    error: 0.05,
+    log: iterationStep,
     shuffle: true
   });
 }

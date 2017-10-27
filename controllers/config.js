@@ -9,7 +9,8 @@ const input = 8,
       connections = 20,
       gates = 15,
       tableCells = 10,
-      iterationStep = 1;
+      iterationStep = 1,
+      showFps = false;
 
 const imageSize = 80,
       maxColor = 255;
