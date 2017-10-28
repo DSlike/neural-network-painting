@@ -10,14 +10,14 @@ function start(){
 }
 
 function go(trainingData){
-  requestAnimFrame();
+  // requestAnimFrame();
   train();
   paint();
 
   iteration += iterationStep;
   let fpsLabel = "";
-  if(showFps == true)
-    fpsLabel = "<br>FPS:"+fps;
+  if(showFps == true){
+    fpsLabel = "<br>FPS:"+fps;}
   document.getElementsByTagName('span')[0].innerHTML = ("Iteration: " + iteration + fpsLabel);
 
   requestAnimationFrame(go);

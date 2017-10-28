@@ -4,7 +4,7 @@ const Trainer = synaptic.Trainer;
 
 // Neural network configuration
 const input = 8,
-      pool = 40,
+      pool = 30,
       output = 4,
       connections = 20,
       gates = 15,
